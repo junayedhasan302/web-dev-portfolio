@@ -1,0 +1,394 @@
+/* reset style  */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* img{
+    max-width: 100%;
+} */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* background: #fff6c1; */
+    padding: 12px 0px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.logo-A,
+.logo-AA,
+.logo-AAA {
+    color: #fd6e0a;
+}
+
+/* common button */
+.common-button {
+    color: white;
+    background: #fd6e0a;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.outline-button {
+    color: #fd6e0a;
+    background: white;
+    padding: 10px 20px;
+    border: 1px solid #fd6e0a;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/*Hero Section design*/
+.hero-parent-root {
+    background: #fff4e8;
+}
+
+.hero-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-left p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero-left-p1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.hero-left h2 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.hero-left-button-parent {
+    margin-top: 12px;
+}
+
+/* About us css  */
+.about-parent {
+    background: #fff4e8;
+    margin: 70px auto;
+    border-radius: 10px;
+    padding: 75px;
+    text-align: center;
+}
+
+.about-parent p {
+    margin: 10px 0px;
+}
+
+.about-box-parent {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.about-box-parent .box {
+    background: #f5ecd9;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.about-box-parent .box h2 {
+    font-size: 20px;
+}
+
+
+/* what i do section css  */
+.what-i-do-parent {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.what-i-do-card-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.what-i-do-card-containe,
+.what-i-do-class {
+    border: 2px solid #f17d00;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.what-i-do-card-containe,
+.what-i-do-class h2 {
+    margin: 10px 0px;
+}
+
+.what-i-do-card-containe,
+.what-i-do-class p {
+    color: #757575;
+    font-size: 15px;
+}
+
+.anrevu img {
+    width: 100%;
+    max-width: 45px;
+    height: auto;
+}
+
+/* My amazing work css */
+.my-amazing-parent {
+    text-align: center;
+}
+
+.gallery {
+    margin-top: 20px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    grid-template-areas:
+        "one two three"
+        "four two six"
+        "four five six";
+}
+
+.gallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box-1 {
+    grid-area: one;
+}
+
+.box-2 {
+    grid-area: two;
+}
+
+.box-3 {
+    grid-area: three;
+}
+
+.box-4 {
+    grid-area: four;
+}
+
+.box-5 {
+    grid-area: five;
+}
+
+.box-6 {
+    grid-area: six;
+}
+
+
+
+/* Footer */
+/* footer{
+    text-align: center;
+    margin-top: 70px !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 15px;
+    background: #f5ecd9;
+    padding: 20px;
+    border-radius: 10px;
+}
+footer form{
+    padding: 20px;
+}
+footer form input, footer form textarea{
+    border: none;
+    outline: none;
+    background: #ffffff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: block;
+    width: 500px;
+    height: 30px;
+    margin-bottom: 8px;
+}
+footer form textarea{
+    max-width: 500px;
+    max-height: 400px;
+    margin-bottom: 30px;
+}
+
+.left{
+    margin: 10px 0px;
+}
+.footer-icon span{
+    color: #f17d00;
+    font-size: 25px;
+} */
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 70px;
+
+    margin: 80px auto;
+    padding: 70px;
+
+    background: #fff4e8;
+    border-radius: 18px;
+}
+
+/* Left Side */
+
+.left {
+    flex: 1;
+}
+
+.left h1 {
+    font-size: 36px;
+    margin-bottom: 18px;
+    color: #181818;
+}
+
+.left p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 480px;
+}
+
+/* Social Icons */
+
+.footer-icon {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.footer-icon span {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    color: #fd6e0a;
+
+    border: 2px solid #fd6e0a;
+    border-radius: 50%;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+.footer-icon span:hover {
+    background: #fd6e0a;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(253, 110, 10, .35);
+}
+
+/* Right Side */
+
+.right {
+    flex: 1;
+}
+
+.right h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #181818;
+}
+
+/* Form */
+
+.right form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Inputs */
+
+.right input,
+.right textarea {
+    width: 100%;
+
+    padding: 16px 18px;
+
+    border: 2px solid transparent;
+    border-radius: 12px;
+
+    background: white;
+
+    font-size: 16px;
+    color: #333;
+
+    transition: .3s;
+}
+
+.right textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+/* Focus Effect */
+
+.right input:focus,
+.right textarea:focus {
+    border-color: #fd6e0a;
+    box-shadow: 0 0 0 5px rgba(253, 110, 10, .12);
+}
+
+/* Submit Button */
+
+.right button {
+    width: fit-content;
+    margin-top: 8px;
+    transition: .3s;
+}
+
+.right button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(253, 110, 10, .3);
+}
