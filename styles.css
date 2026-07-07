@@ -129,17 +129,21 @@ ul {
 
 
 /* what i do section css  */
-.what-i-do-class:hover{
-    background: #f17d00 ;
-    h2{
+.what-i-do-class:hover {
+    background: #f17d00;
+
+    h2 {
         color: #ffffff;
     }
-    p{
+
+    p {
         color: white
     }
+
     transform: scale(1.1);
     transition: 0.5s;
 }
+
 .what-i-do-parent {
     margin: 60px auto;
     text-align: center;
@@ -406,28 +410,32 @@ footer {
 
 
 /* Summary  Left */
-.resume-summary{
+.resume-summary {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.resume-summary .summary-title{
+
+.resume-summary .summary-title {
     font-size: 35px;
     margin: 8px auto;
-    
+
 }
-resume-summary h2{
+
+resume-summary h2 {
     font-size: bolder;
 }
-.resume-summary .left{
+
+.resume-summary .left {
     display: flex;
     flex-direction: column;
     /* border: 1px solid blue; */
-    margin: 8px auto; 
+    margin: 8px auto;
     gap: 10px;
 }
+
 /* Summary  Right*/
-.resume-summary .right{
+.resume-summary .right {
     display: flex;
     flex-direction: column;
     /* border: 1px solid blue; */
@@ -436,7 +444,8 @@ resume-summary h2{
 
 
 
-.education, .experience{
+.education,
+.experience {
     padding: 20px;
     border: 1px solid rgb(241, 241, 241);
     border-radius: 12px;
@@ -447,7 +456,7 @@ resume-summary h2{
 }
 
 
-.main{
+.main {
     display: flex;
     justify-content: center;
 }
