@@ -1,27 +1,36 @@
-/* reset style  */
+/* =========================================================
+   1. RESET
+========================================================= */
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
 }
 
-/* img{
-    max-width: 100%;
-} */
+
+/* =========================================================
+   2. GLOBAL / LAYOUT HELPERS
+========================================================= */
 .container {
     max-width: 1200px;
     margin: auto;
 }
 
+
+/* =========================================================
+   3. NAVBAR
+========================================================= */
 nav {
     display: flex;
     justify-content: space-between;
-    /* background: #fff6c1; */
+    align-items: center;
     padding: 12px 0px;
 }
 
 nav ul li a {
     text-decoration: none;
+    color: #181818;
 }
 
 ul {
@@ -43,7 +52,10 @@ ul {
     color: #fd6e0a;
 }
 
-/* common button */
+
+/* =========================================================
+   4. COMMON BUTTONS
+========================================================= */
 .common-button {
     color: white;
     background: #fd6e0a;
@@ -67,7 +79,9 @@ ul {
 }
 
 
-/*Hero Section design*/
+/* =========================================================
+   5. HERO SECTION
+========================================================= */
 .hero-parent-root {
     background: #fff4e8;
 }
@@ -88,7 +102,8 @@ ul {
     font-weight: 600;
 }
 
-.hero-left h2 {
+/* Fixed: markup uses <h1> for the name, not <h2> */
+.hero-left h1 {
     font-weight: bold;
     font-size: 40px;
     margin-bottom: 12px;
@@ -96,9 +111,20 @@ ul {
 
 .hero-left-button-parent {
     margin-top: 12px;
+    display: flex;
+    gap: 12px;
 }
 
-/* About us css  */
+.hero-right img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================================
+   6. ABOUT ME
+========================================================= */
 .about-parent {
     background: #fff4e8;
     margin: 70px auto;
@@ -115,6 +141,7 @@ ul {
     display: flex;
     justify-content: space-between;
     gap: 8px;
+    margin-top: 20px;
 }
 
 .about-box-parent .box {
@@ -128,18 +155,9 @@ ul {
 }
 
 
-/* what i do section css  */
-.what-i-do-class:hover{
-    background: #f17d00 ;
-    h2{
-        color: #ffffff;
-    }
-    p{
-        color: white
-    }
-    transform: scale(1.1);
-    transition: 0.5s;
-}
+/* =========================================================
+   7. WHAT I DO
+========================================================= */
 .what-i-do-parent {
     margin: 60px auto;
     text-align: center;
@@ -152,7 +170,6 @@ ul {
     gap: 30px;
 }
 
-.what-i-do-card-containe,
 .what-i-do-class {
     border: 2px solid #f17d00;
     padding: 8px;
@@ -160,15 +177,29 @@ ul {
     text-align: left;
 }
 
-.what-i-do-card-containe,
 .what-i-do-class h2 {
     margin: 10px 0px;
 }
 
-.what-i-do-card-containe,
 .what-i-do-class p {
     color: #757575;
     font-size: 15px;
+}
+
+/* Fixed: nested Sass-style selectors aren't valid in plain CSS,
+   split into separate hover rules */
+.what-i-do-class:hover {
+    background: #f17d00;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.what-i-do-class:hover h2 {
+    color: #ffffff;
+}
+
+.what-i-do-class:hover p {
+    color: white;
 }
 
 .anrevu img {
@@ -177,7 +208,61 @@ ul {
     height: auto;
 }
 
-/* My amazing work css */
+
+/* =========================================================
+   8. RESUME SUMMARY
+========================================================= */
+.resume-summary-parent {
+    margin: 60px auto;
+    text-align: center;
+}
+
+.summary-title {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.resume-summary {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    text-align: left;
+}
+
+/* Fixed: renamed from ".left"/".right" (which clashed with the
+   footer's .left/.right classes) to dedicated resume-col class */
+.resume-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+
+.resume-col h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.education,
+.experience {
+    padding: 20px;
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 12px;
+    background-color: #fff8f0;
+    /* Fixed: box-shadow needs offset/blur values, a bare color is invalid */
+    box-shadow: 0 4px 10px rgba(24, 24, 24, 0.08);
+}
+
+.education p,
+.experience p {
+    margin-top: 6px;
+    color: #666;
+}
+
+
+/* =========================================================
+   9. MY AMAZING WORK (GALLERY)
+========================================================= */
 .my-amazing-parent {
     text-align: center;
 }
@@ -225,86 +310,37 @@ ul {
 }
 
 
-
-/* Footer */
-/* footer{
-    text-align: center;
-    margin-top: 70px !important;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    gap: 15px;
-    background: #f5ecd9;
-    padding: 20px;
-    border-radius: 10px;
-}
-footer form{
-    padding: 20px;
-}
-footer form input, footer form textarea{
-    border: none;
-    outline: none;
-    background: #ffffff;
-    padding: 8px 15px;
-    border-radius: 8px;
-    display: block;
-    width: 500px;
-    height: 30px;
-    margin-bottom: 8px;
-}
-footer form textarea{
-    max-width: 500px;
-    max-height: 400px;
-    margin-bottom: 30px;
-}
-
-.left{
-    margin: 10px 0px;
-}
-.footer-icon span{
-    color: #f17d00;
-    font-size: 25px;
-} */
-
-
-
-
-
-/* ================= FOOTER ================= */
-
+/* =========================================================
+   10. FOOTER
+========================================================= */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 70px;
-
     margin: 80px auto;
     padding: 70px;
-
     background: #fff4e8;
     border-radius: 18px;
 }
 
-/* Left Side */
-
-.left {
+/* Footer - left side */
+footer .left {
     flex: 1;
 }
 
-.left h1 {
+footer .left h1 {
     font-size: 36px;
     margin-bottom: 18px;
     color: #181818;
 }
 
-.left p {
+footer .left p {
     color: #666;
     line-height: 1.8;
     margin-bottom: 30px;
     max-width: 480px;
 }
-
-/* Social Icons */
 
 .footer-icon {
     display: flex;
@@ -315,139 +351,72 @@ footer {
 .footer-icon span {
     width: 48px;
     height: 48px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background: white;
     color: #fd6e0a;
-
     border: 2px solid #fd6e0a;
     border-radius: 50%;
-
     font-size: 20px;
     cursor: pointer;
-
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .footer-icon span:hover {
     background: #fd6e0a;
     color: white;
     transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(253, 110, 10, .35);
+    box-shadow: 0 8px 18px rgba(253, 110, 10, 0.35);
 }
 
-/* Right Side */
-
-.right {
+/* Footer - right side (contact form) */
+footer .right {
     flex: 1;
 }
 
-.right h2 {
+footer .right h2 {
     font-size: 32px;
     margin-bottom: 25px;
     color: #181818;
 }
 
-/* Form */
-
-.right form {
+footer .right form {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-/* Inputs */
-
-.right input,
-.right textarea {
+footer .right input,
+footer .right textarea {
     width: 100%;
-
     padding: 16px 18px;
-
     border: 2px solid transparent;
     border-radius: 12px;
-
     background: white;
-
     font-size: 16px;
     color: #333;
-
-    transition: .3s;
+    transition: 0.3s;
 }
 
-.right textarea {
+footer .right textarea {
     min-height: 180px;
     resize: vertical;
 }
 
-/* Focus Effect */
-
-.right input:focus,
-.right textarea:focus {
+footer .right input:focus,
+footer .right textarea:focus {
     border-color: #fd6e0a;
-    box-shadow: 0 0 0 5px rgba(253, 110, 10, .12);
+    box-shadow: 0 0 0 5px rgba(253, 110, 10, 0.12);
 }
 
-/* Submit Button */
-
-.right button {
+footer .right button {
     width: fit-content;
     margin-top: 8px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
-.right button:hover {
+footer .right button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(253, 110, 10, .3);
-}
-
-
-/* Summary  Left */
-.resume-summary{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.resume-summary .summary-title{
-    font-size: 35px;
-    margin: 8px auto;
-    
-}
-resume-summary h2{
-    font-size: bolder;
-}
-.resume-summary .left{
-    display: flex;
-    flex-direction: column;
-    /* border: 1px solid blue; */
-    margin: 8px auto; 
-    gap: 10px;
-}
-/* Summary  Right*/
-.resume-summary .right{
-    display: flex;
-    flex-direction: column;
-    /* border: 1px solid blue; */
-    margin: 8px auto;
-}
-
-
-
-.education, .experience{
-    padding: 20px;
-    border: 1px solid rgb(241, 241, 241);
-    border-radius: 12px;
-    padding: auto 500px;
-    gap: 100px;
-    background-color: #fff8f0;
-    box-shadow: #181818;
-}
-
-
-.main{
-    display: flex;
-    justify-content: center;
+    box-shadow: 0 10px 20px rgba(253, 110, 10, 0.3);
 }
